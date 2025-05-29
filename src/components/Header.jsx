@@ -125,11 +125,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './header.css';
 import { Search, Bell, ChevronDown, User, Lock, Activity, LogOut } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const profileRef = useRef(null); // ⬅️ Attach to the full profile section
-
+  const navigate = useNavigate();
   const toggleDropdown = () => {
     setIsDropdownOpen(prev => !prev);
   };
@@ -155,7 +156,8 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem('user_id'); // Remove user_id from localStorage
     localStorage.removeItem('authtoken'); // Remove user_id from localStorage
-    window.location.href = '/login'; // Redirect to login page
+    navigate('/login'); // Redirect to login page
+    window.location.reload();
   }
   return (
     <header className="header">
