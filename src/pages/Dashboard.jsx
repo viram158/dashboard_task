@@ -6,21 +6,6 @@ import {
   DollarSign,
   TrendingUp,
   TrendingDown,
-  Search,
-  Bell,
-  ChevronDown,
-  BarChart3,
-  FileText,
-  Car,
-  BookOpen,
-  Briefcase,
-  MapPin,
-  HelpCircle,
-  Newspaper,
-  Settings,
-  Package,
-  Shield,
-  Building,
 } from "lucide-react";
 import {
   LineChart,
@@ -55,18 +40,7 @@ const Dashboard = () => {
     { day: "50th", value: 60 },
   ];
 
-  // Sample data for revenue chart
-  const revenueData = [
-    { name: "Jan", value: 20 },
-    { name: "Feb", value: 60 },
-    { name: "Mar", value: 40 },
-    { name: "Apr", value: 80 },
-    { name: "May", value: 35 },
-    { name: "Jun", value: 70 },
-    { name: "Jul", value: 55 },
-    { name: "Aug", value: 90 },
-    { name: "Sep", value: 75 },
-  ];
+  
 
   const StatCard = ({ title, value, change, icon: Icon, trend, className }) => (
     <div className={`stat-card ${className}`}>

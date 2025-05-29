@@ -106,7 +106,7 @@
 
 // export default App;
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import LoginForm from "./pages/login/LoginForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 import MainLayout from "./MainLayout";
